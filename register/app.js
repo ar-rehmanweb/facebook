@@ -65,15 +65,20 @@ const signupHandler = () => {
   users.push(userObj);
   localStorage.setItem("users", JSON.stringify(users));
 
+  let usersFromDB = JSON.parse(localStorage.getItem("users"));
+
+  usersFromDB.push(userObj);
+  localStorage.setItem("users", JSON.stringify(usersFromDB));
+
   sweety("success", "Signup Done", "Congratulations! signup successfully!")
 };
 
 signupBtn.addEventListener("click", signupHandler);
 
 
-    firstName.value
-    lastName.value
-    email.value
-    day.value
-    month.value
-    year.value
+    // firstName.value
+    // lastName.value
+    // email.value
+    // day.value
+    // month.value
+    // year.value
