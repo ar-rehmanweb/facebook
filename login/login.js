@@ -29,11 +29,12 @@ const loginHandler = () => {
 
     if(usersFromDB[i]?.email === email.value ){
         if(usersFromDB[i]?.password === password.value){
-            return sweety(
-                "success",
-                "Login Successful",
-                "Welcome back " + usersFromDB[i]?.firstName + "!"
-              );
+            // return sweety(
+            //     "success",
+            //     "Login Successful",
+            //     "Welcome back " + usersFromDB[i]?.firstName + "!"
+            //   );
+            return alert("login sucessfully!")
         }
         break;
     }
