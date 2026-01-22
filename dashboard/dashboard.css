@@ -1,0 +1,18 @@
+@import url(../global.css);
+
+.dashboard-header {
+  display: grid;
+  grid-template-columns: auto auto auto;}
+
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  
+  }
+
+  .header-left > img {
+    width: 50px;
+  };
+
+  
