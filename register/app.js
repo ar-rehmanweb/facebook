@@ -8,7 +8,8 @@ let password = document.getElementById("password");
 let gender = document.getElementsByName("gender");
 let signupBtn = document.getElementById("signupBtn");
 
-let users = [];
+// Initialize users from localStorage correctly
+let users = JSON.parse(localStorage.getItem("users")) || [];
 
 const sweety = (error, title, message) => {
   Swal.fire({
@@ -34,16 +35,13 @@ const signupHandler = () => {
     );
   }
 
-  if (
-    password.value.length < 8
-  ) {
+  if (password.value.length < 8) {
     return sweety(
       "error",
       "something went wrong",
-      "Password at least 8 character!" || password.value.trim() == ""
+      "Password at least 8 character!"
     );
   }
-  console.log("aagy bi chalaa");
 
   var userObj = {
     firstName: firstName.value,
@@ -55,30 +53,23 @@ const signupHandler = () => {
     password: password.value,
   };
 
-  // console.log("chl rahaa ho =>")
   for (let i = 0; i < gender.length; i++) {
     if (gender[i].checked) {
       userObj.gender = gender[i].value;
     }
   }
 
+  // Add new user to the array
   users.push(userObj);
+  // Update localStorage with the new array
   localStorage.setItem("users", JSON.stringify(users));
 
-  let usersFromDB = JSON.parse(localStorage.getItem("users"));
-
-  usersFromDB.push(userObj);
-  localStorage.setItem("users", JSON.stringify(usersFromDB));
-
-  sweety("success", "Signup Done", "Congratulations! signup successfully!")
+  sweety("success", "Signup Done", "Congratulations! signup successfully!");
+  
+  // Redirect to login page after short delay
+  setTimeout(() => {
+    window.location.href = "../login/login.html";
+  }, 2000);
 };
 
 signupBtn.addEventListener("click", signupHandler);
-
-
-    // firstName.value
-    // lastName.value
-    // email.value
-    // day.value
-    // month.value
-    // year.value

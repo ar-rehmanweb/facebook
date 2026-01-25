@@ -1,70 +1,158 @@
-body {
+* {
+    box-sizing: border-box;
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
-}
-.logo{
-    text-align: center;
-    margin-top: 40px;
-}
-.login-container {
-    width: 350px;
-    margin: 120px auto;
-    padding: 20px;
-    background: white;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 0;
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
 }
 
-.logo {
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-bottom: 100px; /* Space for footer essentially */
+}
+
+/* Main Layout */
+.main-container {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically center in the wrapper */
+    padding-top: 72px;
+}
+
+/* Left Side */
+.left-side {
+    width: 580px;
+    padding-right: 32px;
+    margin-bottom: 100px; /* Detailed alignment */
+}
+
+.fb-logo {
+    height: 106px;
+    margin: -28px;
+}
+
+.slogan {
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 32px;
+    width: 500px;
+    color: #1c1e21;
+    margin-top: 10px;
+}
+
+/* Right Side - Login Card */
+.right-side {
+    width: 396px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+    padding: 10px 16px 24px;
+    width: 100%;
+    text-align: center;
+}
+
+.input-field {
+    width: 100%;
+    height: 52px;
+    padding: 14px 16px;
+    font-size: 17px;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    margin: 6px 0;
+    outline: none;
+}
+
+.input-field:focus {
+    border-color: #1877f2;
+    box-shadow: 0 0 0 2px #e7f3ff;
+}
+
+.login-btn {
+    background-color: #1877f2;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    line-height: 48px;
+    padding: 0 16px;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 6px;
+}
+
+.login-btn:hover {
+    background-color: #166fe5;
+}
+
+.forgot-password {
     color: #1877f2;
-    font-size: 36px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    display: block;
+    margin-top: 16px;
     margin-bottom: 20px;
 }
 
-input {
-    width: 90%;
-    padding: 12px;
-    margin: 8px 0;
-    font-size: 16px;
+.forgot-password:hover {
+    text-decoration: underline;
 }
 
-button {
-    width: 95%;
-    padding: 12px;
-    background: #1877f2;
-    color: white;
+.divider {
+    border-bottom: 1px solid #dadde1;
+    margin: 0 10px 20px;
+}
+
+.create-account-btn {
+    background-color: #42b72a;
     border: none;
-    font-size: 18px;
+    border-radius: 6px;
+    font-size: 17px;
+    line-height: 48px;
+    padding: 0 16px;
+    color: white;
+    font-weight: bold;
     cursor: pointer;
+    width: auto; /* Allow content width */
+    display: inline-block;
+    padding-left: 25px; 
+    padding-right: 25px;
 }
 
-button:hover {
-    background: #166fe5;
+.create-account-btn:hover {
+    background-color: #36a420;
 }
 
-.dashboard-heading {
-    text-align: center;
-    margin-top: 200px;
-    font-size: 40px;
+.create-page-text {
+    margin-top: 28px;
+    font-size: 14px;
+    color: #1c1e21;
 }
 
-.login-links {
-    margin-top: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
+.create-page-text a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #1c1e21;
 }
 
-.login-form > p{
-    font-size: 18px;
-    text-align: center;
+.create-page-text a:hover {
+    text-decoration: underline;
 }
 
-@media screen and (max-width: 425px) {
-    .login-container {
-        width: 90%;
-        margin: 80px auto;
-    }
-}

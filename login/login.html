@@ -1,35 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LOGIN</title>
-    <link rel="stylesheet" href="login.css" />
-    <link rel="stylesheet" href="sweetalert2.min.css">
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="login.css">
+  <title>Login</title>
+</head>
+<body>
+              <!-- Left Side: Logo and Text -->
+            <div class="left-side">
+                <img src="https://cdn.freebiesupply.com/logos/large/2x/facebook-1-logo-png-transparent.png" alt="Facebook" class="fb-logo">
+                <h2 class="slogan">Facebook helps you connect and share with the people in your life.</h2>
+            </div>
 
-      <div class="login-container">
-        <h1 class="logo">facebook</h1>
-
-      <div class="login-form">
-        <p>Log in to Facebook</p>
-      </div>
-
-      <form onsubmit="login(event)">
-        <input type="email" id="email" placeholder="Email address" required />
-        <input type="password" id="password" placeholder="Password" required />
-        <div class="loginBtn">
-        <button type="submit">Log In</button>
+            <!-- Right Side: Login Form -->
+            <div class="right-side">
+                <div class="login-card">
+                    <form id="loginForm">
+                        <input type="text" placeholder="Email address or phone number" class="input-field" required>
+                        <input type="password" placeholder="Password" class="input-field" required>
+                        <button type="submit" class="login-btn">Log in</button>
+                    </form>
+                    <a href="#" class="forgot-password">Forgotten password?</a>
+                    <div class="divider"></div>
+                    <div style="text-align: center; margin-top: 20px;">
+                        <a href="../register/index.html" class="create-account-btn" id="openModal" style="text-decoration: none; line-height: 48px; display: inline-block;">Create new account</a>
+                    </div>
+                </div>
+                <p class="create-page-text"><a href="#">Create a Page</a> for a celebrity, brand or business.</p>
+            </div>
         </div>
-        <div class="login-links">
-          <a href="#">forget password?</a>
-          <a href="/register/index.html">Sign up for Facebook</a>
-        </div>
-      </form>
     </div>
-
-    <script src="sweetalert2.min.js"></script>
     <script src="login.js"></script>
-  </body>
+</body>
 </html>

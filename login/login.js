@@ -1,45 +1,13 @@
-let email = document.getElementById("email");
-let password = document.getElementById("password");
-let loginBtn = document.getElementById("loginBtn");
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
 
-loginBtn.addEventListener("click", loginHandler);
+    var email = document.querySelector('input[type="text"]').value;
+    var password = document.querySelector('input[type="password"]').value;
 
-const sweety = (error, title, message) => {
-  Swal.fire({
-    icon: error,
-    title: title,
-    text: message
-  });
-};
-
-const loginHandler = () => {
-    if(email.value.trim() === "" || password.value.trim() === ""){
-        return sweety(
-            "error",
-            "something went wrong",
-            "Please Enter all fields!"
-          );
+    if (email && password) {
+        // Simple validation successful
+        window.location.href = '../dashboard/dashboard.html';
+    } else {
+        alert('Please enter both email and password.');
     }
-}
-
- let usersFromDB = JSON.parse(localStorage.getItem("users"));
-
- for(let i=0; i < usersFromDB.length; i++){
-    let user = usersFromDB[i];
-
-    if(usersFromDB[i]?.email === email.value ){
-        if(usersFromDB[i]?.password === password.value){
-            // return sweety(
-            //     "success",
-            //     "Login Successful",
-            //     "Welcome back " + usersFromDB[i]?.firstName + "!"
-            //   );
-            return alert("login sucessfully!")
-        }
-        break;
-    }
- }
-
-
-//  yaha se hi continue hoga age.................................ALLAH HAFIZ !!!!!
-      
+});

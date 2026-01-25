@@ -1,39 +1,107 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Dashboard</title>
-  </head>
-  <body>
-    <div>
-      <header class="dashboard-header">
-        <img
-          class="dashboard-left"
-          src="assets/facebook-logo-vector-facebook-official-logo-vector-facebook-logo-illustrator_1002350-1803.avif"
-          alt="facebook-logo"
-        />
-        <div class="search"></div>
-        <input type="text" placeholder="search facebook" />
-      </header>
-    </div>
-    <div>
-      <i class="fa-regular fa-user"></i>
-    </div>
-    <div>
-      <i class="fa-solid fa-user"></i>
-    </div>
-    <div>
-      <i class="fa-solid fa-bar"></i>
-    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg" alt="Facebook Logo" class="logo">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search Facebook">
+            </div>
+        </div>
+        <div class="nav-middle">
+            <a href="#" class="active"><i class="fas fa-home"></i></a>
+            <a href="#"><i class="fas fa-play-circle"></i></a>
+            <a href="#"><i class="fas fa-store"></i></a>
+            <a href="#"><i class="fas fa-users"></i></a>
+            <a href="#"><i class="fas fa-gamepad"></i></a>
+        </div>
+        <div class="nav-right">
+            <div class="nav-icon"><i class="fas fa-bars"></i></div>
+            <div class="nav-icon"><i class="fas fa-comment-dots"></i></div>
+            <div class="nav-icon"><i class="fas fa-bell"></i></div>
+            <div class="nav-icon" id="logoutBtn"><i class="fas fa-user-circle"></i></div>
+        </div>
+    </nav>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/v4-shims.min.js"
-      integrity="sha512-ADYQColMa2x3iTFA+Lscel6CH9IWwIQW9B/8um6FJvHZ8IFgSHCRhg8wXTXfH4psA0h6yvchGf8sjZwV07Je0Q=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="/authentification/quthentification.js"></script>
-  </body>
+    <!-- Main Content -->
+    <div class="main-container">
+        <!-- Left Sidebar -->
+        <div class="left-sidebar">
+            <div class="sidebar-row">
+                <i class="fas fa-user-circle user-icon"></i>
+                <span>User Name</span>
+            </div>
+            <div class="sidebar-row">
+                <i class="fas fa-user-friends" style="color: #1877f2;"></i>
+                <span>Friends</span>
+            </div>
+            <div class="sidebar-row">
+                <i class="fas fa-history" style="color: #1877f2;"></i>
+                <span>Memories</span>
+            </div>
+            <div class="sidebar-row">
+                <i class="fas fa-bookmark" style="color: #bc2a8d;"></i>
+                <span>Saved</span>
+            </div>
+            <div class="sidebar-row">
+                <i class="fas fa-users" style="color: #1877f2;"></i>
+                <span>Groups</span>
+            </div>
+            <div class="sidebar-row">
+                <i class="fas fa-video" style="color: #1877f2;"></i>
+                <span>Video</span>
+            </div>
+            <div class="sidebar-row">
+                <i class="fas fa-store" style="color: #1877f2;"></i>
+                <span>Marketplace</span>
+            </div>
+            <div class="sidebar-row">
+                <i class="fas fa-chevron-down"></i>
+                <span>See more</span>
+            </div>
+        </div>
+
+       
+
+    
+           
+        <!-- Right Sidebar -->
+        <div class="right-sidebar">
+            <div class="sidebar-title">Sponsored</div>
+            <div class="sponsored-item">
+                <img src="https://picsum.photos/100/100?random=20" alt="Ad">
+                <div>
+                    <p class="ad-title">Amazing Product</p>
+                    <p class="ad-link">example.com</p>
+                </div>
+            </div>
+            
+            <div class="divider" style="margin: 10px 0;"></div>
+            
+            <div class="sidebar-title">Contacts</div>
+            <div class="contact-item">
+                <i class="fas fa-user-circle"></i>
+                <span>Friend One</span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-user-circle"></i>
+                <span>Friend Two</span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-user-circle"></i>
+                <span>Friend Three</span>
+            </div>
+        </div>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
 </html>
