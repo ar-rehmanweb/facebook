@@ -56,9 +56,11 @@ body {
     display: flex;
     gap: 10px;
     height: 100%;
-    margin-right: 100px;
+    /* margin-right: 100px;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
+    position: absolute;
+    left: 35%;
 }
 
 .nav-middle a {
