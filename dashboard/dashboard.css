@@ -54,8 +54,11 @@ body {
 
 .nav-middle {
     display: flex;
-    gap: 10px; /* Reduced gap slightly */
+    gap: 10px;
     height: 100%;
+    margin-right: 100px;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-middle a {
@@ -72,7 +75,7 @@ body {
 
 .nav-middle a:hover {
     background-color: #f0f2f5;
-    border-radius: 8px; /* Slightly problematic with full height, but looks okay */
+    border-radius: 8px; 
 }
 
 .nav-middle a.active {
